@@ -8,16 +8,39 @@
 <body>
     
 <script>
+//DESTRUCTURING OF ARRAYS
 
 // let getDta= [ "rangadiya" , "front" , "male " , "23"]
 //  let   [username , clasa , gender , age]=getDta
- let   [username , clasa , gender , age]=[ "rangadiya" , "front" , "male " , "23"]
 
- console.log(username);
- console.log(clasa);
- console.log(gender);
- console.log(age);
+// let   [username , clasa , gender , age]=[ "rangadiya" , "front" , "male " , "23"]
 
+// console.log(username);
+// console.log(clasa);
+// console.log(gender);
+// console.log(age);
+
+//DESTRUCTURING OF OBJECT
+// let myObject={name:"raxit",age: 27};
+// var { name, age }=myObject;//object destructuring
+// console.log("print a name  :  ",name);
+// console.log("print a age  :  ",age);
+// console.log("print object",myObject);
+
+// nested object
+let myObj={
+    name:"niryu",
+    age : 23,
+    gender: "female",
+    adrres:{
+        city:"ahmedabad",
+        pin:363330
+    }
+}
+
+
+ let {name, age, gender, adrres: {city,pin}}=myObj;
+ console.log(myObj);
 </script>
 
 </body>

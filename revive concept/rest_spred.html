@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest_spread</title>
+</head>
+<h2>rest</h2>
+<p>recive a multipule argument in single parameter</p>
+<h2>spread</h2>
+<p>sending multipule argument in deferent parameter </p>
+<body>
+<script>
+
+//rest 
+
+//recive multipule argument in single parameter
+
+otherdata = 0
+function addition (a,...data) {
+    console.log("value of a",a);
+    data.forEach(cal => {
+        console.log("value of cal",cal);
+otherdata += cal
+    });
+    console.log("value of otherdata",otherdata);
+        return a + otherdata
+}
+// console.log(addition(10,20));
+console.log(addition("addition finel  :",10,40,140,1000,23,1000,-2000));
+
+
+
+
+
+//spread 
+
+//sending multipule argument in different perameter respactively
+  //for array  more recomndede
+function userDetails(username,email,gender) {
+    console.log(username,email,gender);
+}
+arryofUserdetails=["rangadiay","rangadiya8531@gmail.com","male"]
+
+
+userDetails(...arryofUserdetails)
+   
+</script>
+    
+</body>
+</html>
