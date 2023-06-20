@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>class</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <script>
-        class classofRaxit{
-            //function of addition
-            addition(a,...b){
-                let result = 0 
-                b.forEach(data=>{
-
-                });
-            }
+      class newData {
+        //addition
+        addition(...a) {
+          console.log("called");
+          let result = 0;
+          a.forEach((val) => {
+            result += val;
+          });
+          console.log("addition", result);
         }
-        let myObject= new classofRaxit
-// console.log(myObject);
+        //substraction
+        sub(f, ...a) {
+          console.log("called sub");
+          let result = 0;
+          a.forEach((data) => {
+            result = f - data;
+          });
+          console.log("substraction", result);
+        }
+        //multiplication
+        cross(...a) {
+          console.log("called multiplication");
+          let result = 1;
+          a.forEach((data) => {
+            result *= data;
+          });
+          console.log("multiplication", result);
+        }
+        //divison
+        div(n,...a) {
+          console.log("called divison");
+          let result = n;
+          a.forEach((data) => {
+            result /= data;
+          });
+          console.log("divison", result);
+        }
+      }
 
-console.log(classofRaxit.addition(10,10));
+      let newObj = new newData();
+      newObj.addition(12, 12, 12, 12, 12, 12, 12, 12);
+      newObj.sub(100, 30, 30);
+      newObj.cross(5, 5);
+      newObj.div(10, 5);
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inheritance</title>
+  </head>
+  <body>
+    <script>
+        //parent class start
+        class mathOp {
+            addition(a,...b) {
+                console.log("called addition");
+                let result = 0
+                b.forEach((data) => {
+                    result+=data
+                });
+                return result+a
+                console.log("addition",result);
+            }
+        }
+        //parent class end
+        
+        
+
+        
+        
+        //child class add in to parent class
+        //CHILD CLASS START
+        class otheData extends mathOp{
+            averageofnumber(a,b){
+                let arr=[a,b]
+                let additionRes=this.addition(...arr)
+                console.log(additionRes);
+            }
+        }
+        //CHILD CLASS END
+
+
+        //OBJECT CREATE AND CALLED A CLASS'S FUNCTION AND DATA NUMBER
+        let newObj = new mathOp();
+        console.log(newObj.addition(10,10 ,10));
+        let newObjc = new otheData();
+        newObjc.averageofnumber(50,90)
+
+        </script>
+  </body>
+</html>
