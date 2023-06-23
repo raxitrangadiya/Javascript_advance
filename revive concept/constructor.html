@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>Constructor is a method invoked by default when object are created</P>
+    <p>Constructor never return </p>
+    <p>Constructor init some value for class</p>
+    <script>
+class Books {
+    author=""
+    constructor(name){
+        this.author= name;
+        console.log("constructor");
+    }
+    Twostate(){
+        console.log("example of two",this.author);
+    }
+    threeEdiots(){
+        console.log("example of three ",this.author);
+    }
+}
+let NewOb = new Books("chetan bhagat");
+NewOb.threeEdiots()
+NewOb.Twostate()
+    </script>
+</body>
+</html>
