@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callback</title>
+  </head>
+  <body>
+    <p>
+      callback is a function that is passed as an argument to another function the main purpose of a callabck to specify what should happen after a particuler operation or task is completed.
+      
+    </p>
+    <p>example: iamgin you have a robot when you have clap then robo dance their clap is (clap hand function ) and robo is (dance ) function....</p>
+    <script>
+      //example -1
+
+      function card(set) {
+          console.log("card called");
+          set()
+      }
+      function payment(params) {
+          console.log("payment called");
+      }
+      card(payment)
+
+      //example -2
+      //  function cardPyment(data) {
+      //      console.log(" my testting function");
+      // data()
+      //  }
+      //  function  palceOrdersumeery(nn) {
+      //     console.log("payment recipt",nn);
+      //  }
+      //  cardPyment(palceOrdersumeery)
+
+      //example -3
+      function claphand(callback) {
+        console.log("clap your hands ! ");
+        setTimeout(() => {
+          callback();
+        }, 2000);
+      }
+      function dance() {
+        console.log("robo start a dance  ");
+      }
+      claphand(dance);
+    </script>
+  </body>
+</html>
