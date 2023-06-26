@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback hell</title>
+</head>
+<body>
+    <p>call back hell also known as the "pyarmid of doom ", is term used to desscribe a situation in java script programing where there are multipulr nested callback ,leading to code that becomes hard to read ,understand, and  maintain </p>
+    <p>it typically occurs when working eith asynchronnous operation that depenfd on each other or have complex dependancies</p> 
+    <script>
+getdata(function (data) {
+    process1(data,function (result 1) {
+        process2(result,function (result 2) {
+            process3(result3,function (result 3) {
+                //more nested function
+            })
+        })
+    })
+})
+    </script>
+</body>
+</html>
