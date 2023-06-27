@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>polymorphysm</title>
+  </head>
+  <body>
+    <p>
+      polymorph is a core concept of a oops ==== object orianted paradigm that
+      way a performe a single action different forms its provide ability to call
+      same method in different javascript object
+    </p>
+    <script>
+      let a = 5;
+      a = 12;
+      a = 15;
+      a = 30;
+      class mathop{
+        sumFortwo(){
+            console.log("math op without argument");
+        }
+        sumFortwo(a){
+            console.log("math op with single a  argument",a);
+        }
+        sumFortwo(val1,val2){
+            console.log("math op with 2 val argument",val1,val2);
+        }
+      }
+      let newdata = new mathop
+newdata.sumFortwo()
+newdata.sumFortwo(12)
+newdata.sumFortwo(12,13)
+    </script>
+  </body>
+</html>
