@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyn Await</title>
+</head>
+<body>
+    <script>
+        function resolveAfter2Seconds() {
+            return new Promise(resolve =>{
+                fetch("https://jayramin.000webhostapp.com/allusers").then((res)=>res.json()).then((response) =>{
+                    resolve(response.Data)
+                })
+            })
+        }
+        async function asynccall() {
+            console.log("called async before resolved");
+            const result = await resolveAfter2Seconds();
+            console.log("result",result);
+            console.log("asynk call after resolved");
+        }
+        asynccall()
+    </script>
+</body>
+</html>
