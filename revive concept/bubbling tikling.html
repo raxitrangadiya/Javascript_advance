@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bubbling tiklinh</title>
+    <style>
+        #div{
+            height: 200px;
+            width: 200px;
+background-color: red;
+        }
+    </style>
 </head>
 <body>
     <p>bubbling:   that menas in to out direction calling </p>
     <p>tikling:   that menas out  to IN direction calling </p>
     <P>EVENT STOP PROPOGATION (event.stopPropagation) : this sentance use for stop a bubbling and tikling</P>
+
+    <div id="div">
+        <button id="but">hello</button>
+    </div>
     <script>
+
+        let parent=document.querySelector('#div');
+        parent.addEventListener('click',function () {
+            event.stopPropagation()
+            console.log("parent is envoked");
+        },false)
+        
+        let child=document.getElementById("but");
+        child.addEventListener('click',function () {
+            event.stopPropagation()
+            console.log("child is invoked");
+        },false)
+
     </script>
 </body>
 </html>

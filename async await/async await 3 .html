@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async await</title>
+</head>
+
+<body>
+    <script>
+        function newex() {
+            return new Promise(resolve => {
+                fetch("https://jayramin.000webhostapp.com/allusers").then((res) => res.json()).then((fetchdata) => {
+                    // console.log(fetchdata.Data);
+                    // return fetchdata
+                    resolve(fetchdata.Data)
+                })
+            })
+        }
+        async function asyncfunc() {
+            console.log("called async before declaration of await");
+            let result = await newex()
+            console.log("result",result);        
+            console.log("called async after declaration of await");
+        }
+        asyncfunc()
+    </script>
+</body>
+
+</html>
